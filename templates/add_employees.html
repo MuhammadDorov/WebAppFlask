@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <form action="/addemploy" method="post" class="form-contact">
+        <p><label>ФИО: </label> <input type="text" name="lfname" value="" required />
+        <p><label>Должность: </label> <input type="text" name="post" value="" required />
+        <p><label>Зарплата: </label> <input type="text" name="wages" value="" required />
+        <p><label>Дата приема на работу: </label> <input type="text" name="adddate" value="" required />
+        <p><input type="submit" value="Добавить" />
+    </form>
+
+    {% for cat, msg in get_flashed_messages(True) %}
+        <div class="flash {{cat}}">{{msg}}</div>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>{{ title }}</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/stiles.css')}}" rel="stylesheet"/>
+
+</head>
+
+
+
+<body>
+    <h1>Таблица сотрудников</h1>
+    <table>
+        <tr id="header">
+            <th>№</th>
+            <th>Аватар</th>
+            <th>ФИО</th>
+            <th>Должность</th>
+            <th>Зарплата</th>
+            <th>Дата приема на работу</th>
+        </tr>
+        {% for u in list %}
+            <tr>
+                <td>{{u.id}}</td>
+                <td>{{u.id}}</td>
+                <td>{{u.lfname}}</td>
+                <td>{{u.post}}</td>
+                <td>{{u.wages}} руб</td>
+                <td>{{u.adddate}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+

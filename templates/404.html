@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link type="text/css" href="{{ url_for('static', filename='css/404.css')}}" rel="stylesheet"/>
+    </head>
+
+    <body>
+	    <div class="wrap">
+		    <div class="logo">
+			    <h1>404</h1>
+			    <p> Извините - страница не найдена!</p>
+			    <div class="sub">
+			        <p><a href="{{ url_for('index') }}"> Вернуться на главную </a></p>
+			    </div>
+		    </div>
+	    </div>
+    </body>
+</html>
